@@ -21,7 +21,7 @@ try {
     </head>
     <body>
         <div id="container">
-            <h1>Employees</h1>
+            <h1>Tasks</h1>
             <table class="table table-bordered table-condensed">
                 <thead>
                     <tr>
