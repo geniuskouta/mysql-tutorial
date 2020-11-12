@@ -1,23 +1,21 @@
 <?php
     require_once 'dbconfig.php';
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    /* select query */
-    $sql = 'SELECT subject, start_date, description
-    FROM tasks
-    ORDER BY start_date';
-    $q = $pdo->query($sql);
-    $q->setFetchMode(PDO::FETCH_ASSOC);
-} catch (PDOException $pe) {
-    die("Could not connect to the database $dbname :" . $pe->getMessage());
-}
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        /* select query */
+        $sql = 'SELECT subject, start_date, description
+        FROM tasks
+        ORDER BY start_date';
+        $q = $pdo->query($sql);
+        $q->setFetchMode(PDO::FETCH_ASSOC);
+    } catch (PDOException $pe) {
+        die("Could not connect to the database $dbname :" . $pe->getMessage());
+    }
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>PHP MySQL Query Data Demo</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <div id="container">
