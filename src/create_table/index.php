@@ -7,4 +7,4 @@
         return ;
     }
 
-    echo "Created $created";
+    echo "Created TASK table";
