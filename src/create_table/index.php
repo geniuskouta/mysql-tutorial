@@ -1,9 +1,10 @@
 <?php
     require_once 'CreateTableDemo.php';
     $obj = new CreateTableDemo();
-    $isCreated = $obj->createTaskTable();
-    if($isCreated) {
-        echo 'TASK table created.';
+    $created = $obj->createTaskTable();
+    if(!$created) {
+        echo 'Failed to create TASK table.';
         return ;
     }
-    echo 'Failed to create TASK table.';
+
+    echo "Created $created";
